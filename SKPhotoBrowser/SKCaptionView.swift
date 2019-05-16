@@ -10,7 +10,7 @@ import UIKit
 
 open class SKCaptionView: UIView {
     fileprivate var photo: SKPhotoProtocol?
-    fileprivate var photoLabel: UILabel!
+    fileprivate var photoLabel: YYLabel!
     fileprivate var photoLabelPadding: CGFloat = 10
     
     required public init?(coder aDecoder: NSCoder) {
