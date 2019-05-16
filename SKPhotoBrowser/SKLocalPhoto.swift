@@ -16,8 +16,7 @@ open class SKLocalPhoto: NSObject, SKPhotoProtocol {
     open var contentMode: UIView.ContentMode = .scaleToFill
     open var shouldCachePhotoURLImage: Bool = false
     open var caption: String?
-    open var attCaption: NSAttributedString?
-    open var tapgGestureBlock : (() -> ())?
+    open var tapGestureBlock : (() -> ())?
     open var index: Int = 0
     
     override init() {

@@ -65,7 +65,6 @@ private extension SKCaptionView {
         photoLabel.shadowColor = UIColor(white: 0.0, alpha: 0.5)
         photoLabel.shadowOffset = CGSize(width: 0.0, height: 1.0)
         photoLabel.text = photo?.caption
-        photoLabel.attributedText = photo?.attCaption
         
         photoLabel.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(photoLabeTapAction))
@@ -76,7 +75,7 @@ private extension SKCaptionView {
     
     @objc func photoLabeTapAction(){
         
-        photo?.tapgGestureBlock?()
+        photo?.tapGestureBlock?()
     }
 }
 

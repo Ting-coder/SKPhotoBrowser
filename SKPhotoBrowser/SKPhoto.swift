@@ -12,8 +12,7 @@ import UIKit
     var index: Int { get set }
     var underlyingImage: UIImage! { get }
     var caption: String? { get }
-    var attCaption: NSAttributedString? { get }
-    var tapgGestureBlock : (() -> ())? { get set }
+    var tapGestureBlock : (() -> ())? { get set }
     var contentMode: UIView.ContentMode { get set }
     func loadUnderlyingImageAndNotify()
     func checkCache()
@@ -24,8 +23,7 @@ open class SKPhoto: NSObject, SKPhotoProtocol {
     open var index: Int = 0
     open var underlyingImage: UIImage!
     open var caption: String?
-    open var attCaption : NSAttributedString?
-    open var tapgGestureBlock : (() -> ())?
+    open var tapGestureBlock : (() -> ())?
     open var contentMode: UIView.ContentMode = .scaleAspectFill
     open var shouldCachePhotoURLImage: Bool = false
     open var photoURL: String!
