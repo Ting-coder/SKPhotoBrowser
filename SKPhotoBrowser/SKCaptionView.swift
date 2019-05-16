@@ -10,7 +10,7 @@ import UIKit
 
 open class SKCaptionView: UIView {
     fileprivate var photo: SKPhotoProtocol?
-    fileprivate var photoLabel: YYLabel!
+    fileprivate var photoLabel: UILabel!
     fileprivate var photoLabelPadding: CGFloat = 10
     
     required public init?(coder aDecoder: NSCoder) {
@@ -68,8 +68,15 @@ private extension SKCaptionView {
         photoLabel.attributedText = photo?.attCaption
         
         photoLabel.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer.init(target: self, action: #selector(photoLabeTapAction))
+        photoLabel.addGestureRecognizer(tapGesture)
         
         addSubview(photoLabel)
+    }
+    
+    @objc func photoLabeTapAction(){
+        
+        photo?.tapgGestureBlock?()
     }
 }
 
